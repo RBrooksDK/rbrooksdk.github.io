@@ -12,7 +12,7 @@ hide:
 </style>
 
 <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 30px;">
-  <div style="flex: 0 0 250px; margin-bottom: 20px;">
+  <div style="flex: 0 0 200px; margin-bottom: 20px;">
     <img src="figures/profile_pic.png" alt="Profile Picture" style="width: 100%; border-radius: 50%;">
     <p style="font-size: 0.8em; text-align: right">
   <strong>Richard Brooks</strong><br>
