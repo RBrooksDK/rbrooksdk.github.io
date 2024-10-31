@@ -14,9 +14,9 @@ hide:
 <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 30px;">
   <div style="flex: 0 0 250px; margin-bottom: 20px;">
     <img src="figures/profile_pic.png" alt="Profile Picture" style="width: 100%; border-radius: 50%;">
-    <p style="font-size: 1.2em; text-align: right">
+    <p style="font-size: 0.8em; text-align: right">
   <strong>Richard Brooks</strong><br>
-  <span style="font-size: 0.8em; line-height: 1.2; margin-top: -5px; display: inline-block;">
+  <span style="font-size: 0.7em; line-height: 1.2; margin-top: -5px; display: inline-block;">
     Associate Professor<br>Software Engineering<br>VIA University College, Horsens
   </span>
   </p>
