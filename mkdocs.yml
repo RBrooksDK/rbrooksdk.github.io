@@ -16,6 +16,7 @@ copyright: Copyright &copy; 2024 Richard Brooks
 # Configurations
 theme:
   name: material
+  # custom_dir: overrides
   favicon: figures/logo.png
   logo: figures/logo.png
   icon:
@@ -35,10 +36,10 @@ theme:
     # - navigation.expand
     - navigation.footer
     - navigation.indexes
-    # - navigation.instant
+    - navigation.instant
     # - navigation.instant.prefetch
     # - navigation.instant.progress
-    # - navigation.prune
+    - navigation.prune
     - navigation.sections
     - navigation.tabs
     # - navigation.tabs.sticky
@@ -47,8 +48,8 @@ theme:
     - search.highlight
     - search.share
     - search.suggest
-    # - toc.follow
-    # - toc.integrate
+    - toc.follow
+    - toc.integrate
   palette:
     # Light mode
     - scheme: default
@@ -113,7 +114,6 @@ extra_javascript:
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 
 extra:
-  sidebar_content: sidebar.md
   status:
     new: Recently added
     deprecated: Deprecated
