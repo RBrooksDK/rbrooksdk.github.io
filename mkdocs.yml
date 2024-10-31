@@ -13,7 +13,7 @@ repo_url: https://github.com/RBrooksDK/rbrooksdk.github.io
 # Copyright
 copyright: Copyright &copy; 2024 Richard Brooks
 
-# Configuration
+# Configurations
 theme:
   name: material
   logo: figures/logo.png
