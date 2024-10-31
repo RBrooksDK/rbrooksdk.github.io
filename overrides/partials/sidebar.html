@@ -1,0 +1,3 @@
+{% if extra.sidebar_content %}
+  {{ read(extra.sidebar_content) | markdown }}
+{% endif %}
