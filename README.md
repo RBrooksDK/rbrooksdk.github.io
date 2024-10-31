@@ -1,2 +1,6 @@
-# rbrooksdk.github.io
-Homepage for Richard Brooks
+# Richard Brooks
+Welcome to my personal website. I am an Associate Professor at the Software Engineering Department at [VIA University College](https://en.via.dk/programmes/bachelor/software-technology-engineering), Horsens. I am also head of the [Data Engineering](https://en.via.dk/programmes/bachelor/software-technology-engineering/data-engineering) group at the department. My interests are in the mathematically based courses such as [Machine Learning](https://en.via.dk/tmh-courses/introduction-to-machine-learning-and-ai?education=ict), [Linear Algebra](https://en.via.dk/tmh-courses/applied-linear-algebra?education=ict), [Stochastic Modelling and Processes](https://en.via.dk/tmh-courses/stochastic-modelling-and-processes?education=ict), [Algorithms and Data Structures](https://en.via.dk/tmh-courses/algorithms-and-data-structures?education=ict) and [Mathematics for Software Engineering](https://en.via.dk/tmh-courses/mathematics-for-software-engineering?education=ict).
+
+I am also interested in the [Python](https://www.python.org/) programming language and the [Jupyter](https://jupyter.org/) notebook environment. I have a [GitHub](github.com/rbrooksdk) account where I share my code and projects.
+
+If you are interested in my work, please feel free to contact me. I am always open to new collaborations and projects.
