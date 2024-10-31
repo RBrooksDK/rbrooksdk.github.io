@@ -1,3 +1,8 @@
+---
+hide:
+  - toc
+---
+
 # Courses
 Below is a list of the courses that I am currently teaching or have taught recently. Click on the course name to get more information about the course.
 
