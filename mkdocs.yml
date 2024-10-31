@@ -33,12 +33,12 @@ theme:
     # - content.tabs.link
     - content.tooltips
     # - header.autohide
-    # - navigation.expand
+    - navigation.expand
     - navigation.footer
     - navigation.indexes
     - navigation.instant
-    # - navigation.instant.prefetch
-    # - navigation.instant.progress
+    - navigation.instant.prefetch
+    - navigation.instant.progress
     - navigation.prune
     - navigation.sections
     - navigation.tabs
@@ -49,12 +49,12 @@ theme:
     - search.share
     - search.suggest
     - toc.follow
-    - toc.integrate
+    # - toc.integrate
   palette:
     # Light mode
     - scheme: default
       primary: blue grey
-      accent: green
+      accent: deep orange
       toggle:
         icon: material/toggle-switch-off-outline
         name: Switch to dark mode
@@ -132,4 +132,5 @@ nav:
   - Home: README.md
   - Courses: courses.md
   - Supervision: supervision.md
+  - Projects: projects.md
   - CV: cv.md
