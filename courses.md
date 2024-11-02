@@ -10,7 +10,7 @@ Below is a list of the courses that I am currently teaching or have taught recen
 You can find a list of all Software Engineering courses at [VIA University College](https://en.via.dk/programmes/bachelor/software-technology-engineering/course-catalogue) on the official website.
 
 ## 2024
-Mathematics for Software Engineering
+[Mathematics for Software Engineering](https://rbrooksdk.github.io/MSE1/){:target="_blank"}
 
 Applied Linear Algebra
 

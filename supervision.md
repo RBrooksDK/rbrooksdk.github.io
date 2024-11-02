@@ -12,7 +12,7 @@ Feel free to reach out if you’re interested in doing a project or thesis in an
 
 --- 
 
-## Current Projects
+## Recent Projects
 
 | **Name**                | **Title**                                | **Year** |
 |-------------------------|------------------------------------------|----------|
@@ -27,5 +27,5 @@ Feel free to reach out if you’re interested in doing a project or thesis in an
 |-------------------------|------------------------------------------|----------|
 | [Markéta Lapčíková](https://www.linkedin.com/in/marketa-lapcikova/)<br>[Kim Tranberg](https://www.linkedin.com/in/kim-tranberg/) | Offshore Wind Turbine Forecasting       | 2023     |
 | [Signe Bjørnbak Mølby](https://www.linkedin.com/in/signebj%C3%B8rnbakm%C3%B8lby/) | Predictions of Operation and Maintenance Costs using Data Mining Algorithms           | 2022     |
-| [Nadia Lund Digemose](https://dk.linkedin.com/in/nadiadigemose)<br>[Mads Christensen]()            | Digitalization Inside the Segment of SME-Auditors - and the Effect Hereby  | 2021     |
+| [Nadia Lund Digemose](https://dk.linkedin.com/in/nadiadigemose)<br>[Mads Christensen]()            | Digitalization Inside the Segment of SME-Auditors - And the Effect Hereby  | 2021     |
 | [Daniel Vilhelm Kim](https://www.linkedin.com/in/daniel-kim-b03b9612b/)<br>[Nikolina Chalakova](https://www.linkedin.com/in/nikolina-chalakova-60754715a/)<br>[Tina Petcova](https://www.linkedin.com/in/tina-petkova/) | Freehand Drawing Enhancement       | 2019     |
