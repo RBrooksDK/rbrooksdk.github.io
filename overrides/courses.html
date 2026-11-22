@@ -1,0 +1,31 @@
+{% extends "main.html" %}
+{% import "partials/rb-card.html" as rb %}
+{% set cat = config.extra.catalog %}
+
+{% block content %}
+{{ super() }}
+<div class="rb-scope" id="rb-courses" data-filter="all">
+  {{ rb.chips('rb-courses', cat.areas, 'all', 'All') }}
+
+  {% if cat.running %}
+  <section class="rb-year">
+    <h2>Running now</h2>
+    <div class="rb-grid">{% for c in cat.running %}{{ rb.card(c) }}{% endfor %}</div>
+  </section>
+  {% endif %}
+
+  {% if cat.upcoming %}
+  <section class="rb-year">
+    <h2>Coming up</h2>
+    <div class="rb-grid">{% for c in cat.upcoming %}{{ rb.card(c) }}{% endfor %}</div>
+  </section>
+  {% endif %}
+
+  {% for y in cat.earlier %}
+  <section class="rb-year">
+    <h2>{{ y.year }}</h2>
+    <div class="rb-grid">{% for c in y.courses %}{{ rb.card(c) }}{% endfor %}</div>
+  </section>
+  {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,51 @@
+areas:
+  - title: Machine learning
+    text: Data patterns, model training and applied AI
+  - title: Algorithms and data structures
+    text: Efficient, well-argued solutions
+  - title: Data engineering
+    text: Pipelines, ETL and data warehousing
+
+# Newest first. Add a project by adding a block at the top.
+projects:
+  - year: 2024
+    title: Utilizing Machine Learning and Market Analysis for Predicting Energy Prices in Brazil
+    people:
+      - {name: Lilla Kontra, url: "https://www.linkedin.com/in/lilla-kontra/"}
+      - {name: Veronika Lietavcova, url: "https://www.linkedin.com/in/veronika-lietavcova-3653561b7/"}
+  - year: 2024
+    title: Data Processing Pipeline for Machine Learning
+    people:
+      - {name: Artūrs Siliņš, url: "https://www.linkedin.com/in/arturssilins/"}
+  - year: 2024
+    title: Application of Georeference Contrastive Learning to Automation of Underwater Inspection
+    people:
+      - {name: András Kovács, url: "https://www.linkedin.com/in/andr%C3%A1s-kov%C3%A1cs-92a586234/"}
+      - {name: Gergő Nádor, url: "https://www.linkedin.com/in/gerg%C5%91-n%C3%A1dor-3a2385252/"}
+      - {name: Kristiāns Dāvis Eglītis, url: "https://www.linkedin.com/in/kegliitis/"}
+  - year: 2024
+    title: Product Data Automatic Taxonomy Mapping
+    people:
+      - {name: Jakub Baginski, url: "https://www.linkedin.com/in/jakub-baginski-b3618b223/"}
+      - {name: Julia Papiernik, url: "https://www.linkedin.com/in/juliapapiernik/"}
+      - {name: Tomasz Jakub Sloma, url: "https://www.linkedin.com/in/tomasz-sloma/"}
+  - year: 2023
+    title: Offshore Wind Turbine Forecasting
+    people:
+      - {name: Markéta Lapčíková, url: "https://www.linkedin.com/in/marketa-lapcikova/"}
+      - {name: Kim Tranberg, url: "https://www.linkedin.com/in/kim-tranberg/"}
+  - year: 2022
+    title: Predictions of Operation and Maintenance Costs using Data Mining Algorithms
+    people:
+      - {name: Signe Bjørnbak Mølby, url: "https://www.linkedin.com/in/signebj%C3%B8rnbakm%C3%B8lby/"}
+  - year: 2021
+    title: Digitalization Inside the Segment of SME-Auditors — and the Effect Hereby
+    people:
+      - {name: Nadia Lund Digemose, url: "https://dk.linkedin.com/in/nadiadigemose"}
+      - {name: Mads Christensen}
+  - year: 2019
+    title: Freehand Drawing Enhancement
+    people:
+      - {name: Daniel Vilhelm Kim, url: "https://www.linkedin.com/in/daniel-kim-b03b9612b/"}
+      - {name: Nikolina Chalakova, url: "https://www.linkedin.com/in/nikolina-chalakova-60754715a/"}
+      - {name: Tina Petcova, url: "https://www.linkedin.com/in/tina-petkova/"}

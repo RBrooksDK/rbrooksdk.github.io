@@ -1,0 +1,18 @@
+{#- Supervised projects as a timeline. Set `limit` before including to cut it. -#}
+{% set projects = config.extra.catalog.supervision.projects %}
+{% set n = limit if limit is defined else 4 %}
+<ol class="rb-timeline">
+  {% for p in projects[:n] %}
+  <li class="rb-timeline__item">
+    <span class="rb-timeline__year">{{ p.year }}</span>
+    <div class="rb-timeline__card">
+      <div class="rb-timeline__title">{{ p.title }}</div>
+      <div class="rb-timeline__people">
+        {%- for person in p.people -%}
+          {%- if person.url %}<a href="{{ person.url }}">{{ person.name }}</a>{% else %}{{ person.name }}{% endif %}{% if not loop.last %}, {% endif %}
+        {%- endfor -%}
+      </div>
+    </div>
+  </li>
+  {% endfor %}
+</ol>

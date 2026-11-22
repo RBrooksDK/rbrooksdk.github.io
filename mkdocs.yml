@@ -2,122 +2,112 @@
 site_name: Richard Brooks
 site_url: https://rbrooksdk.github.io/
 site_author: Richard Brooks
-site_description: This is the spot for all my course materials, exercises, and a peek into the projects and people I'm working with. Whether you’re a student, a colleague, or just curious, dive in and see what I'm up to at the Software Enginerring Department at VIA University College.
+site_description: Course sites, supervision and resources from Richard Brooks, Associate Professor at VIA Software Engineering, Horsens.
 docs_dir: .
-site_dir: ../site
+site_dir: _site
+exclude_docs: |
+  _site/**
+  data/**
+  hooks/**
+  templates/**
+  COURSE_YML.md
+  CLAUDE.md
+  requirements.txt
+  figures/profile_pic.png
+  figures/logo.png
+
+validation:
+  omitted_files: ignore
+  absolute_links: ignore
+  unrecognized_links: warn
 
 # Repository information
 repo_name: Github
 repo_url: https://github.com/RBrooksDK/rbrooksdk.github.io
 
-# Copyright
-copyright: Copyright &copy; 2024 Richard Brooks
+copyright: Copyright &copy; 2026 Richard Brooks
 
-# Configurations
 theme:
   name: material
-  # custom_dir: overrides
-  favicon: figures/logo.png
-  logo: figures/logo.png
+  custom_dir: overrides
+  language: en
+  favicon: figures/rb-mark.svg
+  logo: figures/rb-mark.svg
   icon:
     repo: fontawesome/brands/github
-  font:
-    text: Roboto
-    code: Red Hat Mono
   features:
     - announce.dismiss
-    - content.code.annotate
     - content.code.copy
-    # - content.code.select
-    # - content.footnote.tooltips
-    # - content.tabs.link
     - content.tooltips
-    # - header.autohide
-    - navigation.expand
     - navigation.footer
     - navigation.indexes
     - navigation.instant
     - navigation.instant.prefetch
     - navigation.instant.progress
-    - navigation.prune
-    - navigation.sections
     - navigation.tabs
-    # - navigation.tabs.sticky
     - navigation.top
     - navigation.tracking
     - search.highlight
-    - search.share
     - search.suggest
     - toc.follow
-    # - toc.integrate
   palette:
-    # Light mode
     - scheme: default
-      primary: blue grey
-      accent: deep orange
-      toggle:
-        icon: material/toggle-switch-off-outline
-        name: Switch to dark mode
-
-    # Dark mode
-    - scheme: slate
-      primary: black
-      accent: deep orange
+      accent: orange
       toggle:
         icon: material/toggle-switch
+        name: Switch to dark mode
+    - scheme: slate
+      primary: custom
+      accent: orange
+      toggle:
+        icon: material/toggle-switch-off
         name: Switch to light mode
+  font:
+    text: "VIA Type"
+    code: "Roboto Mono"
+
+hooks:
+  - hooks/catalog.py
 
 plugins:
   - same-dir
+  - search
   - blog
-  
-# Extensions
+
 markdown_extensions:
-  - abbr
   - admonition
+  - abbr
   - attr_list
   - def_list
   - footnotes
   - md_in_html
   - toc:
       permalink: true
+      toc_depth: 3
   - pymdownx.arithmatex:
       generic: true
-  - pymdownx.betterem:
-      smart_enable: all
-  - pymdownx.caret
   - pymdownx.details
   - pymdownx.emoji:
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
       emoji_index: !!python/name:material.extensions.emoji.twemoji
   - pymdownx.highlight:
       anchor_linenums: true
-      line_spans: __span
-      pygments_lang_class: true
   - pymdownx.inlinehilite
-  - pymdownx.keys
-  - pymdownx.mark
-  - pymdownx.smartsymbols
-  - pymdownx.snippets:
-      auto_append:
-        - includes/mkdocs.md
-  - pymdownx.superfences:
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.superfences
   - pymdownx.tasklist:
       custom_checkbox: true
-  - pymdownx.tilde
 
 extra_javascript:
   - javascripts/mathjax.js
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+  - https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js
+  - javascripts/rb.js
+
+extra_css:
+  - stylesheets/extra.css
+  - stylesheets/rb.css
 
 extra:
-  status:
-    new: Recently added
-    deprecated: Deprecated
   analytics:
     provider: google
     property: !ENV GOOGLE_ANALYTICS_KEY
@@ -133,5 +123,6 @@ nav:
   - Home: README.md
   - Courses: courses.md
   - Supervision: supervision.md
-  - Projects: projects.md
-  - CV: cv.md
+  - Resources: resources.md
+  - Blog:
+    - blog/index.md

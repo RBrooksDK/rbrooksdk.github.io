@@ -1,0 +1,238 @@
+# ============================================================================
+# Catalogue of everything shown on rbrooksdk.github.io
+# ----------------------------------------------------------------------------
+# The build hook (hooks/catalog.py) reads this file every night.
+#
+# * An entry with `repo:` also gets the repo's own `course.yml` (if it has
+#   one) merged on top. That is how a course updates its own progress.
+# * `discover: true` means: any other public repo under `owner` that has a
+#   `course.yml` in its root is picked up automatically. A new course
+#   (e.g. spring 2027) therefore needs NO change here: just add a
+#   course.yml to its repo. See COURSE_YML.md.
+#
+# Status (running / upcoming / completed) is computed, not typed:
+#   - from session dates in course.yml, or
+#   - from `current` + `ends` (used for the autumn 2026 courses below).
+# ============================================================================
+
+owner: RBrooksDK
+discover: true
+
+courses:
+
+  # --- Autumn 2026 (manual progress: bump `current` after each session) ----
+  - repo: STA1_26
+    code: STA1
+    title: Statistics and Data Analysis for Engineers
+    term: Autumn 2026
+    year: 2026
+    lang: en
+    area: stat
+    glyph: "x̄"
+    description: From descriptive statistics to regression, in Python, with six group assignments and a project.
+    current: 10
+    ends: 2026-12-18
+    sessions:
+      - {no: 1, title: Data and Descriptive Statistics}
+      - {no: 2, title: Probability for Data Analysis}
+      - {no: 3, title: Random Variables and Discrete Distributions}
+      - {no: 4, title: Continuous Distributions in Practice}
+      - {no: 5, title: Sampling Distributions and the CLT}
+      - {no: 6, title: Estimation and Confidence Intervals}
+      - {no: 7, title: "Hypothesis Testing I: One-Sample Tests"}
+      - {no: 8, title: "Hypothesis Testing II: Comparing Two Groups"}
+      - {no: 9, title: Analysis of Variance}
+      - {no: 10, title: Simple Linear Regression}
+      - {no: 11, title: Categorical Data and Chi-Square Tests}
+      - {no: 12, title: Integrated Analysis and Exam Preparation}
+
+  - repo: SMP1_26
+    code: SMP1
+    title: Stochastic Modelling and Processes
+    term: Autumn 2026
+    year: 2026
+    lang: en
+    area: stat
+    glyph: "P(t)"
+    description: Probability, Monte Carlo, Markov chains, Poisson processes and time series.
+    current: 10
+    ends: 2026-12-18
+    sessions:
+      - {no: 1, title: Probability Foundations}
+      - {no: 2, title: Discrete Random Variables}
+      - {no: 3, title: Continuous Random Variables}
+      - {no: 4, title: Continuous Random Variables II}
+      - {no: 5, title: Joint Distributions and Dependence}
+      - {no: 6, title: Random Sampling, Monte Carlo and Limit Theorems}
+      - {no: 7, title: Stochastic Processes and Poisson Processes}
+      - {no: 8, title: Markov Chains}
+      - {no: 9, title: "Markov Chains: Long-Run Behaviour"}
+      - {no: 10, title: Time Series Fundamentals}
+      - {no: 11, title: Autoregressive Models, Forecasting and Recap}
+
+  - repo: MSE1_26
+    code: MSE1
+    title: Mathematics for Software Engineering
+    term: Autumn 2026
+    year: 2026
+    lang: en
+    area: math
+    glyph: "∂"
+    description: Functions, sets, combinatorics, probability, linear algebra and gradients.
+    current: 11
+    ends: 2026-12-18
+    sessions:
+      - {no: 1, title: Functions}
+      - {no: 2, title: Numeral Systems}
+      - {no: 3, title: Set Theory}
+      - {no: 4, title: Combinatorics and Probability Theory}
+      - {no: 5, title: Conditional Probabilities and Bayes' Theorem}
+      - {no: 6, title: Descriptive Statistics}
+      - {no: 7, title: Introduction to Linear Algebra}
+      - {no: 8, title: Vectors and Matrices}
+      - {no: 9, title: Matrix Algebra and Determinants}
+      - {no: 10, title: Differentiation of Simple Functions}
+      - {no: 11, title: Gradients and Partial Derivatives}
+      - {no: 12, title: Conclusion and Q&A}
+
+  # --- Spring 2026 -----------------------------------------------------------
+  - repo: ALI1_26
+    code: ALI1
+    title: Applied Linear Algebra
+    term: Spring 2026
+    year: 2026
+    lang: en
+    area: math
+    glyph: "Ax"
+    description: Transformations, change of basis, eigenvalues, orthogonality, SVD and PCA.
+    status: completed
+
+  - repo: STA_26
+    code: STA
+    title: Statistik og Dataanalyse for Softwareteknologi
+    term: Spring 2026
+    year: 2026
+    lang: da
+    area: stat
+    glyph: "σ"
+    description: Sandsynlighed, fordelinger, konfidensintervaller, hypotesetest og regression.
+    status: completed
+
+  - repo: MSU1_26
+    code: MSU1
+    title: Matematik for Spiludviklere
+    term: Spring 2026
+    year: 2026
+    lang: da
+    area: math
+    glyph: "θ"
+    description: Matematikken bag grafik og spil — vektorer, matricer og transformationer.
+    status: completed
+
+  # --- 2025 ------------------------------------------------------------------
+  - repo: MSE1_25
+    code: MSE1
+    title: Mathematics for Software Engineering
+    term: Autumn 2025
+    year: 2025
+    lang: en
+    area: math
+    glyph: "∂"
+    status: completed
+
+  - repo: MSE1_DK_25
+    code: MSE1
+    title: Matematik for Softwareingeniører
+    term: Autumn 2025
+    year: 2025
+    lang: da
+    area: math
+    glyph: "∂"
+    status: completed
+
+  - repo: ALI1_25
+    code: ALI1
+    title: Applied Linear Algebra
+    term: Spring 2025
+    year: 2025
+    lang: en
+    area: math
+    glyph: "Ax"
+    status: completed
+
+  - repo: SMP1_25
+    code: SMP1
+    title: Stochastic Modelling and Processes
+    term: Spring 2025
+    year: 2025
+    lang: en
+    area: stat
+    glyph: "P(t)"
+    status: completed
+
+  - repo: MSU1_25
+    code: MSU1
+    title: Matematik for Spiludviklere
+    term: Spring 2025
+    year: 2025
+    lang: da
+    area: math
+    glyph: "θ"
+    status: completed
+
+  - repo: MAL1_25
+    code: MAL1
+    title: Introduction to Machine Learning and AI
+    term: Spring 2025
+    year: 2025
+    lang: en
+    area: ml
+    glyph: "∇"
+    status: completed
+
+  - repo: trainee_25
+    code: TRAINEE
+    title: Software Technology Trainee — video portal
+    term: 2025
+    year: 2025
+    lang: da
+    area: other
+    glyph: "▷"
+    status: completed
+
+  # --- 2024 ------------------------------------------------------------------
+  - repo: MSE1
+    code: MSE1
+    title: Mathematics for Software Engineering
+    term: Autumn 2024
+    year: 2024
+    lang: en
+    area: math
+    glyph: "∂"
+    status: completed
+
+# Shown on the Resources page and in the Ctrl K palette.
+resources:
+  - title: Math Kickstarter
+    kind: Self-paced course
+    description: Mathematics brush-up for engineering students — short videos, self-check quizzes and exercises with solutions.
+    url: https://rbrooksdk.github.io/math_kickstarter/
+  - title: PythonExam
+    kind: Exam tool
+    description: JupyterLite in the browser for written exams in STA, ALI and SMP. NumPy, SciPy, pandas and Matplotlib included.
+    url: https://rbrooksdk.github.io/PythonExam/lab/index.html
+    repo: https://github.com/RBrooksDK/PythonExam
+
+books:
+  - title: Mathematics for Software Engineering
+    lang: en
+    description: The textbook for MSE1 (LaTeX source).
+    url: https://github.com/RBrooksDK/MSE_book_v2
+  - title: Matematik for softwareingeniører
+    lang: da
+    description: Den danske udgave af MSE-bogen.
+    url: https://github.com/RBrooksDK/MSE_book_v2_da
+  - title: Statistics and Data Analysis for Engineers
+    lang: en
+    description: The textbook for STA1, written alongside the course site.
+    url: https://github.com/RBrooksDK/STA_book_v1

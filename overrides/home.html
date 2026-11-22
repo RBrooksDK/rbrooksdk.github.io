@@ -1,0 +1,140 @@
+{% extends "main.html" %}
+{% import "partials/rb-card.html" as rb %}
+{% set cat = config.extra.catalog %}
+{% set has_now = (cat.running | length) + (cat.upcoming | length) > 0 %}
+
+{% block tabs %}
+{{ super() }}
+<div class="rb-home">
+
+<section class="rb-hero" id="top">
+  <div class="rb-wrap rb-hero__inner">
+    <div class="rb-hero__main">
+      <div class="rb-id">
+        <img class="rb-id__photo" src="{{ 'figures/profile_pic.jpg' | url }}" alt="Richard Brooks" width="132" height="132">
+        <div class="rb-id__text">
+          <span class="rb-id__name">Richard Brooks</span>
+          <span class="rb-id__role">Associate Professor · VIA University College, Horsens</span>
+          <a class="rb-id__mail" href="mailto:rib@via.dk">rib@via.dk</a>
+        </div>
+      </div>
+      <h1 class="rb-hero__title">Ctrl+Alt+<span>Explore</span></h1>
+      <p class="rb-hero__lead">Associate Professor, Program Coordinator and Head of Data Science at <a href="https://en.via.dk/programmes/bachelor/software-technology-engineering">VIA Software Engineering</a>, Horsens. Mathematics, statistics and machine learning — taught so the reasoning stays with the student.</p>
+      <div class="rb-actions">
+        <a class="rb-btn rb-btn--accent" href="#courses">Browse courses
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="rb-btn rb-btn--ghost" href="{{ 'supervision/' | url }}">Project supervision</a>
+      </div>
+    </div>
+
+    <aside class="rb-next" aria-label="Up next">
+      <div class="rb-next__head">
+        <span class="rb-eyebrow">{% if cat.running %}Up next{% elif cat.upcoming %}Coming up{% else %}Between semesters{% endif %}</span>
+        <span class="rb-next__live"><span class="rb-dot" aria-hidden="true"></span>updated {{ cat.today }}</span>
+      </div>
+      {% for c in cat.running if c.next %}
+      <a class="rb-next__row" href="{{ c.url }}">
+        <span class="rb-next__code">{{ c.code }}</span>
+        <span class="rb-next__text">
+          <span class="rb-next__title">{{ c.next.title }}</span>
+          <span class="rb-next__meta">Session {{ c.next.no }} of {{ c.total }}{% if c.next.date %} · {{ c.next.date }}{% endif %}</span>
+        </span>
+      </a>
+      {% endfor %}
+      {% for c in cat.upcoming %}
+      <a class="rb-next__row" href="{{ c.url }}">
+        <span class="rb-next__code">{{ c.code }}</span>
+        <span class="rb-next__text">
+          <span class="rb-next__title" lang="{{ c.lang }}">{{ c.title }}</span>
+          <span class="rb-next__meta">{{ c.starts_label or 'Coming soon' }}</span>
+        </span>
+      </a>
+      {% endfor %}
+      {% if not has_now %}
+      <p class="rb-next__empty">No course is running right now. Earlier editions are below.</p>
+      {% endif %}
+    </aside>
+  </div>
+</section>
+
+<section class="rb-section rb-wrap" id="courses">
+  <div class="rb-section__head">
+    <div>
+      <h2 class="rb-h2">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 8l10-5 10 5-10 5z"/><path d="M6 10.5V16c2.5 2 9.5 2 12 0v-5.5"/></svg>
+        Courses</h2>
+      <p class="rb-sub">Every course has its own site. Progress is read from each course repository every night.</p>
+    </div>
+    {{ rb.chips('rb-home-grid', cat.areas) }}
+  </div>
+  <div class="rb-grid" id="rb-home-grid" data-filter="{{ 'now' if has_now else 'earlier' }}">
+    {% for c in cat.all %}{{ rb.card(c) }}{% endfor %}
+    <p class="rb-grid__empty">No courses in this category right now.</p>
+  </div>
+  <p class="rb-sub"><a href="{{ 'courses/' | url }}">All courses by year</a> · <a href="https://en.via.dk/programmes/bachelor/software-technology-engineering/course-catalogue">VIA Software Engineering course catalogue</a></p>
+</section>
+
+<section class="rb-band" id="supervision">
+  <div class="rb-wrap rb-split">
+    <div class="rb-split__side">
+      <h2 class="rb-h2">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="3"/><circle cx="18" cy="18" r="3"/><circle cx="18" cy="6" r="3"/><path d="M9 6h6M18 9v6M8.2 8.2l7.6 7.6"/></svg>
+        Supervision</h2>
+      <p>Looking for a bachelor or final-project supervisor? I take projects in these areas:</p>
+      <div class="rb-stack">
+        {% for a in cat.supervision.areas %}
+        <div class="rb-tile"><strong>{{ a.title }}</strong><span>{{ a.text }}</span></div>
+        {% endfor %}
+      </div>
+      <a class="rb-btn rb-btn--accent" href="mailto:rib@via.dk?subject=Project%20supervision">Propose a project</a>
+    </div>
+    <div class="rb-split__main">
+      <h3 class="rb-h3">Recent supervised projects</h3>
+      {% include "partials/rb-timeline.html" with context %}
+      <a class="rb-btn rb-btn--ghost" href="{{ 'supervision/' | url }}">All {{ cat.supervision.projects | length }} projects</a>
+    </div>
+  </div>
+</section>
+
+<section class="rb-section rb-wrap" id="resources">
+  <h2 class="rb-h2">
+    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 016.5 17H20V3H6.5A2.5 2.5 0 004 5.5z"/><path d="M4 19.5A2.5 2.5 0 006.5 22H20v-5"/></svg>
+    Books and resources</h2>
+  <div class="rb-grid rb-grid--wide">
+    {% for b in cat.books %}
+    <a class="rb-card rb-card--plain" href="{{ b.url }}">
+      <span class="rb-eyebrow">Book{% if b.lang == 'da' %} · Danish{% endif %}</span>
+      <h3 class="rb-card__title" lang="{{ b.lang }}">{{ b.title }}</h3>
+      <p class="rb-card__desc" lang="{{ b.lang }}">{{ b.description }}</p>
+    </a>
+    {% endfor %}
+    {% for r in cat.resources %}
+    <a class="rb-card rb-card--plain" href="{{ r.url }}">
+      <span class="rb-eyebrow">{{ r.kind }}</span>
+      <h3 class="rb-card__title">{{ r.title }}</h3>
+      <p class="rb-card__desc">{{ r.description }}</p>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="rb-quote" id="about">
+  <div class="rb-wrap rb-split">
+    <blockquote class="rb-split__main rb-quote__text">
+      <span class="rb-quote__mark" aria-hidden="true">“</span>
+      <p>The better we are without AI, the stronger we become with it.</p>
+      <footer>From the AI policy on every course site</footer>
+    </blockquote>
+    <div class="rb-split__side rb-quote__about">
+      <h2>About</h2>
+      <p>Trained in mathematics at Aarhus University. At VIA I coordinate the Software Engineering programme and lead the Data Science group, with a focus on curriculum coherence and progression to AU master's programmes.</p>
+      <p>Talk: <em lang="da">AI i praksis: Fra idé til værdiskabende prototyper</em> — TechCircle seminar.</p>
+      <p>Every course site is built with MkDocs Material, Python, Jupyter and Manim.</p>
+    </div>
+  </div>
+</section>
+
+</div>
+{% endblock %}
+
+{% block content %}<div class="rb-empty"></div>{% endblock %}

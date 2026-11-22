@@ -1,0 +1,38 @@
+{#- One course card. Used on the home page and the Courses page. -#}
+{% macro card(c) -%}
+<a class="rb-card" href="{{ c.url }}" data-area="{{ c.area }}" data-status="{{ c.status }}" data-now="{{ '1' if c.status in ['running', 'upcoming'] else '0' }}">
+  <div class="rb-card__top">
+    <span class="rb-card__glyph" aria-hidden="true">{{ c.glyph }}</span>
+    <span class="rb-tag">{{ c.code }} · {{ c.term }}</span>
+  </div>
+  <h3 class="rb-card__title" lang="{{ c.lang }}">{{ c.title }}</h3>
+  {%- if c.description %}
+  <p class="rb-card__desc" lang="{{ c.lang }}">{{ c.description }}</p>
+  {%- endif %}
+  {%- if c.has_progress %}
+  <div class="rb-progress">
+    <div class="rb-progress__label"><span>Session {{ c.done }} of {{ c.total }}</span><span>{{ c.pct }}%</span></div>
+    <div class="rb-progress__track" role="progressbar" aria-label="{{ c.code }} progress" aria-valuemin="0" aria-valuemax="{{ c.total }}" aria-valuenow="{{ c.done }}"><span class="rb-progress__bar" style="width: {{ c.pct }}%"></span></div>
+  </div>
+  {%- elif c.status == 'upcoming' %}
+  <span class="rb-card__meta rb-card__meta--soon">{{ c.starts_label or 'Coming soon' }}</span>
+  {%- elif c.status == 'running' %}
+  <span class="rb-card__meta">Running now</span>
+  {%- else %}
+  <span class="rb-card__meta">Completed{% if c.lang == 'da' %} · in Danish{% endif %}</span>
+  {%- endif %}
+</a>
+{%- endmacro %}
+
+{#- Filter chips that drive a [data-filter] container. -#}
+{% macro chips(target, areas, first_key='now', first_label='Current') -%}
+<div class="rb-chips" role="group" aria-label="Filter courses" data-rb-target="{{ target }}">
+  <button type="button" class="rb-chip" data-filter="{{ first_key }}" aria-pressed="true">{{ first_label }}</button>
+  {%- for a in areas %}
+  <button type="button" class="rb-chip" data-filter="{{ a.key }}" aria-pressed="false">{{ a.label }}</button>
+  {%- endfor %}
+  {%- if first_key == 'now' %}
+  <button type="button" class="rb-chip" data-filter="earlier" aria-pressed="false">Earlier editions</button>
+  {%- endif %}
+</div>
+{%- endmacro %}

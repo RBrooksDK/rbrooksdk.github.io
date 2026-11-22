@@ -1,0 +1,17 @@
+{% extends "main.html" %}
+{% set cat = config.extra.catalog %}
+
+{% block content %}
+{{ super() }}
+<div class="rb-scope">
+  <div class="rb-grid rb-grid--wide">
+    {% for a in cat.supervision.areas %}
+    <div class="rb-tile"><strong>{{ a.title }}</strong><span>{{ a.text }}</span></div>
+    {% endfor %}
+  </div>
+  <p><a class="rb-btn rb-btn--accent" href="mailto:rib@via.dk?subject=Project%20supervision">Propose a project</a></p>
+  <h2>Supervised projects</h2>
+  {% set limit = 1000 %}
+  {% include "partials/rb-timeline.html" with context %}
+</div>
+{% endblock %}

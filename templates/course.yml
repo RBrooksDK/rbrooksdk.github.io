@@ -1,0 +1,27 @@
+# course.yml — put this file in the ROOT of a course repository.
+# The main site (rbrooksdk.github.io) finds it automatically every night.
+# Everything except `code`, `title` and `sessions` is optional.
+
+code: STA                       # short code shown on the card
+title: Statistik og Dataanalyse # course name
+term: Spring 2027               # shown on the card
+year: 2027
+lang: da                        # en or da
+area: stat                      # stat | math | ml | other (used by the filters)
+glyph: "σ"                      # big symbol on the card
+description: Sandsynlighed, fordelinger, konfidensintervaller, hypotesetest og regression.
+# url: https://rbrooksdk.github.io/STA_27/   # default: https://rbrooksdk.github.io/<repo>/
+
+# One line per session. With dates, progress updates itself:
+#   before the first date -> "Starts 5 Feb 2027 · week 6"
+#   during                -> "Session N of M" + "Up next" on the home page
+#   after the last date   -> "Completed", moves to earlier editions
+sessions:
+  - {no: 1, title: Repetition af sandsynlighedsteori, date: 2027-02-05}
+  - {no: 2, title: Diskrete fordelinger I, date: 2027-02-12}
+  # - {no: 3, title: ..., date: 2027-02-19}
+
+# Overrides, only when needed:
+# current: 4          # sessions done, if a session was moved or cancelled
+# status: completed   # force upcoming | running | completed
+# hidden: true        # keep the course off the main site
