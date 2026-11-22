@@ -1,0 +1,28 @@
+{% extends "main.html" %}
+{% set cat = config.extra.catalog %}
+
+{% block content %}
+{{ super() }}
+<div class="rb-scope">
+  <h2>Books</h2>
+  <div class="rb-grid rb-grid--wide">
+    {% for b in cat.books %}
+    <a class="rb-card rb-card--plain" href="{{ b.url }}">
+      <span class="rb-eyebrow">Book{% if b.lang == 'da' %} · Danish{% endif %}</span>
+      <h3 class="rb-card__title" lang="{{ b.lang }}">{{ b.title }}</h3>
+      <p class="rb-card__desc" lang="{{ b.lang }}">{{ b.description }}</p>
+    </a>
+    {% endfor %}
+  </div>
+  <h2>Tools and self-study</h2>
+  <div class="rb-grid rb-grid--wide">
+    {% for r in cat.resources %}
+    <a class="rb-card rb-card--plain" href="{{ r.url }}">
+      <span class="rb-eyebrow">{{ r.kind }}</span>
+      <h3 class="rb-card__title">{{ r.title }}</h3>
+      <p class="rb-card__desc">{{ r.description }}</p>
+    </a>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

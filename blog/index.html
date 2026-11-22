@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="This is the spot for all my course materials, exercises, and a peek into the projects and people I'm working with. Whether you’re a student, a colleague, or just curious, dive in and see what I'm up to at the Software Enginerring Department at VIA University College.">
+        <meta name="description" content="Course sites, supervision and resources from Richard Brooks, Associate Professor at VIA Software Engineering, Horsens.">
       
       
         <meta name="author" content="Richard Brooks">
@@ -15,13 +15,15 @@
         <link rel="canonical" href="https://rbrooksdk.github.io/blog/">
       
       
+        <link rel="prev" href="../resources/">
+      
       
       
         
       
       
-      <link rel="icon" href="../figures/logo.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+      <link rel="icon" href="../figures/rb-mark.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -29,10 +31,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.57a0d79d.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.fb2fffe2.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -46,10 +48,14 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRed+Hat+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Red Hat Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=VIA+Type:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"VIA Type";--md-code-font:"Roboto Mono"}</style>
       
     
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../stylesheets/rb.css">
     
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -77,7 +83,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="deep-orange">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="orange">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -102,7 +108,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href=".." title="Richard Brooks" class="md-header__button md-logo" aria-label="Richard Brooks" data-md-component="logo">
       
-  <img src="../figures/logo.png" alt="logo">
+  <img src="../figures/rb-mark.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -132,20 +138,20 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="deep-orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
       </label>
     
   
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="deep-orange"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="orange"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5M7 15a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
       </label>
     
   
@@ -156,6 +162,48 @@
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
     
     
       <div class="md-header__source">
@@ -247,13 +295,13 @@
   
   
     <li class="md-tabs__item">
-      <a href="../projects/" class="md-tabs__link">
+      <a href="../resources/" class="md-tabs__link">
         
   
   
     
   
-  Projects
+  Resources
 
       </a>
     </li>
@@ -264,18 +312,23 @@
   
   
   
+    
   
-    <li class="md-tabs__item">
-      <a href="../cv/" class="md-tabs__link">
-        
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
   
   
     
   
-  CV
+  Blog
 
-      </a>
-    </li>
+        </a>
+      </li>
+    
   
 
       
@@ -303,7 +356,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="Richard Brooks" class="md-nav__button md-logo" aria-label="Richard Brooks" data-md-component="logo">
       
-  <img src="../figures/logo.png" alt="logo">
+  <img src="../figures/rb-mark.svg" alt="logo">
 
     </a>
     Richard Brooks
@@ -411,14 +464,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../projects/" class="md-nav__link">
+      <a href="../resources/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Projects
+    Resources
   
 
     
@@ -435,17 +488,89 @@
       
   
   
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="./" class="md-nav__link md-nav__link--active">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blog
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link md-nav__link--active" for="__nav_5" id="__nav_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Blog
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
   
   
     <li class="md-nav__item">
-      <a href="../cv/" class="md-nav__link">
+      <a href=".." class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    CV
+    Archive
   
 
     
@@ -454,6 +579,14 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -507,8 +640,31 @@
         
       </main>
       
+
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../resources/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Resources">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Resources
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
@@ -516,7 +672,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright &copy; 2024 Richard Brooks
+      Copyright &copy; 2026 Richard Brooks
     </div>
   
   
@@ -566,6 +722,21 @@
   </div>
 </footer>
       
+<div class="rb-palette" id="rb-palette" hidden>
+  <div class="rb-palette__backdrop" data-rb-close></div>
+  <div class="rb-palette__panel" role="dialog" aria-modal="true" aria-label="Explore courses and pages">
+    <div class="rb-palette__bar">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <label for="rb-palette-q" class="rb-sr">Search courses, sessions and pages</label>
+      <input id="rb-palette-q" type="text" autocomplete="off" spellcheck="false" placeholder="Search courses, sessions, pages…" role="combobox" aria-expanded="true" aria-controls="rb-palette-list">
+      <button type="button" class="rb-palette__esc" data-rb-close aria-label="Close">Esc</button>
+    </div>
+    <ul class="rb-palette__list" id="rb-palette-list" role="listbox"></ul>
+    <div class="rb-palette__foot">↑ ↓ to move · Enter to open · Esc to close</div>
+  </div>
+</div>
+<script id="rb-palette-data" type="application/json">[{"hint": "up next", "href": "https://rbrooksdk.github.io/STA1_26/", "kind": "STA1", "label": "Session 11 \u00b7 Categorical Data and Chi-Square Tests"}, {"hint": "up next", "href": "https://rbrooksdk.github.io/SMP1_26/", "kind": "SMP1", "label": "Session 11 \u00b7 Autoregressive Models"}, {"hint": "up next", "href": "https://rbrooksdk.github.io/MSE1_26/", "kind": "MSE1", "label": "Session 12 \u00b7 Conclusion and Q\u0026A"}, {"hint": "running now", "href": "https://rbrooksdk.github.io/STA1_26/", "kind": "STA1", "label": "Statistics and Data Analysis for Engineers"}, {"deep": true, "hint": "session", "href": "https://rbrooksdk.github.io/STA1_26/", "kind": "STA1", "label": "01 \u00b7 Data and Descriptive Statistics"}, {"deep": true, "hint": "session", "href": "https://rbrooksdk.github.io/STA1_26/", "kind": "STA1", "label": "02 \u00b7 Probability for Data Analysis"}, {"deep": true, "hint": "session", "href": "https://rbrooksdk.github.io/STA1_26/", "kind": "STA1", "label": "03 \u00b7 Random Variables and Discrete Distributions"}, {"deep": true, "hint": "session", "href": "https://rbrooksdk.github.io/STA1_26/", "kind": "STA1", "label": "04 \u00b7 Continuous Distributions in Practice"}, {"deep": true, "hint": "session", "href": "https://rbrooksdk.github.io/STA1_26/", "kind": "STA1", "label": "05 \u00b7 Sampling Distributions and the CLT"}, {"deep": true, "hint": "session", "href": "https://rbrooksdk.github.io/STA1_26/", "kind": "STA1", "label": "06 \u00b7 Estimation and Confidence Intervals"}, {"deep": true, "hint": "session", "href": "https://rbrooksdk.github.io/STA1_26/", "kind": "STA1", "label": "07 \u00b7 Hypothesis Testing I: One-Sample Tests"}, {"deep": true, "hint": "session", "href": "https://rbrooksdk.github.io/STA1_26/", "kind": "STA1", "label": "08 \u00b7 Hypothesis Testing II: Comparing Two Groups"}, {"deep": true, "hint": "session", "href": "https://rbrooksdk.github.io/STA1_26/", "kind": "STA1", "label": "09 \u00b7 Analysis of Variance"}, {"deep": true, "hint": "session", "href": "https://rbrooksdk.github.io/STA1_26/", "kind": "STA1", "label": "10 \u00b7 Simple Linear Regression"}, {"deep": true, "hint": "session", "href": "https://rbrooksdk.github.io/STA1_26/", "kind": "STA1", "label": "11 \u00b7 Categorical Data and Chi-Square Tests"}, {"deep": true, "hint": "session", "href": "https://rbrooksdk.github.io/STA1_26/", "kind": "STA1", "label": "12 \u00b7 Integrated Analysis and Exam Preparation"}, {"hint": "running now", "href": "https://rbrooksdk.github.io/SMP1_26/", "kind": "SMP1", "label": "Stochastic Modelling and Processes"}, {"deep": true, "hint": "session", "href": "https://rbrooksdk.github.io/SMP1_26/", "kind": "SMP1", "label": "01 \u00b7 Probability Foundations"}, {"deep": true, "hint": "session", "href": "https://rbrooksdk.github.io/SMP1_26/", "kind": "SMP1", "label": "02 \u00b7 Discrete Random Variables"}, {"deep": true, "hint": "session", "href": "https://rbrooksdk.github.io/SMP1_26/", "kind": "SMP1", "label": "03 \u00b7 Continuous Random Variables"}, {"deep": true, "hint": "session", "href": "https://rbrooksdk.github.io/SMP1_26/", "kind": "SMP1", "label": "04 \u00b7 Continuous Random Variables II"}, {"deep": true, "hint": "session", "href": "https://rbrooksdk.github.io/SMP1_26/", "kind": "SMP1", "label": "05 \u00b7 Joint Distributions and Dependence"}, {"deep": true, "hint": "session", "href": "https://rbrooksdk.github.io/SMP1_26/", "kind": "SMP1", "label": "06 \u00b7 Random Sampling"}, {"deep": true, "hint": "session", "href": "https://rbrooksdk.github.io/SMP1_26/", "kind": "SMP1", "label": "07 \u00b7 Stochastic Processes and Poisson Processes"}, {"deep": true, "hint": "session", "href": "https://rbrooksdk.github.io/SMP1_26/", "kind": "SMP1", "label": "08 \u00b7 Markov Chains"}, {"deep": true, "hint": "session", "href": "https://rbrooksdk.github.io/SMP1_26/", "kind": "SMP1", "label": "09 \u00b7 Markov Chains: Long-Run Behaviour"}, {"deep": true, "hint": "session", "href": "https://rbrooksdk.github.io/SMP1_26/", "kind": "SMP1", "label": "10 \u00b7 Time Series Fundamentals"}, {"deep": true, "hint": "session", "href": "https://rbrooksdk.github.io/SMP1_26/", "kind": "SMP1", "label": "11 \u00b7 Autoregressive Models"}, {"hint": "running now", "href": "https://rbrooksdk.github.io/MSE1_26/", "kind": "MSE1", "label": "Mathematics for Software Engineering"}, {"deep": true, "hint": "session", "href": "https://rbrooksdk.github.io/MSE1_26/", "kind": "MSE1", "label": "01 \u00b7 Functions"}, {"deep": true, "hint": "session", "href": "https://rbrooksdk.github.io/MSE1_26/", "kind": "MSE1", "label": "02 \u00b7 Numeral Systems"}, {"deep": true, "hint": "session", "href": "https://rbrooksdk.github.io/MSE1_26/", "kind": "MSE1", "label": "03 \u00b7 Set Theory"}, {"deep": true, "hint": "session", "href": "https://rbrooksdk.github.io/MSE1_26/", "kind": "MSE1", "label": "04 \u00b7 Combinatorics and Probability Theory"}, {"deep": true, "hint": "session", "href": "https://rbrooksdk.github.io/MSE1_26/", "kind": "MSE1", "label": "05 \u00b7 Conditional Probabilities and Bayes\u0027 Theorem"}, {"deep": true, "hint": "session", "href": "https://rbrooksdk.github.io/MSE1_26/", "kind": "MSE1", "label": "06 \u00b7 Descriptive Statistics"}, {"deep": true, "hint": "session", "href": "https://rbrooksdk.github.io/MSE1_26/", "kind": "MSE1", "label": "07 \u00b7 Introduction to Linear Algebra"}, {"deep": true, "hint": "session", "href": "https://rbrooksdk.github.io/MSE1_26/", "kind": "MSE1", "label": "08 \u00b7 Vectors and Matrices"}, {"deep": true, "hint": "session", "href": "https://rbrooksdk.github.io/MSE1_26/", "kind": "MSE1", "label": "09 \u00b7 Matrix Algebra and Determinants"}, {"deep": true, "hint": "session", "href": "https://rbrooksdk.github.io/MSE1_26/", "kind": "MSE1", "label": "10 \u00b7 Differentiation of Simple Functions"}, {"deep": true, "hint": "session", "href": "https://rbrooksdk.github.io/MSE1_26/", "kind": "MSE1", "label": "11 \u00b7 Gradients and Partial Derivatives"}, {"deep": true, "hint": "session", "href": "https://rbrooksdk.github.io/MSE1_26/", "kind": "MSE1", "label": "12 \u00b7 Conclusion and Q\u0026A"}, {"hint": "Spring 2026", "href": "https://rbrooksdk.github.io/ALI1_26/", "kind": "ALI1", "label": "Applied Linear Algebra"}, {"hint": "Spring 2026", "href": "https://rbrooksdk.github.io/STA_26/", "kind": "STA", "label": "Statistik og Dataanalyse for Softwareteknologi"}, {"hint": "Spring 2026", "href": "https://rbrooksdk.github.io/MSU1_26/", "kind": "MSU1", "label": "Matematik for Spiludviklere"}, {"hint": "Autumn 2025", "href": "https://rbrooksdk.github.io/MSE1_25/", "kind": "MSE1", "label": "Mathematics for Software Engineering"}, {"hint": "Autumn 2025", "href": "https://rbrooksdk.github.io/MSE1_DK_25/", "kind": "MSE1", "label": "Matematik for Softwareingeni\u00f8rer"}, {"hint": "Spring 2025", "href": "https://rbrooksdk.github.io/ALI1_25/", "kind": "ALI1", "label": "Applied Linear Algebra"}, {"hint": "Spring 2025", "href": "https://rbrooksdk.github.io/SMP1_25/", "kind": "SMP1", "label": "Stochastic Modelling and Processes"}, {"hint": "Spring 2025", "href": "https://rbrooksdk.github.io/MSU1_25/", "kind": "MSU1", "label": "Matematik for Spiludviklere"}, {"hint": "Spring 2025", "href": "https://rbrooksdk.github.io/MAL1_25/", "kind": "MAL1", "label": "Introduction to Machine Learning and AI"}, {"hint": 2025, "href": "https://rbrooksdk.github.io/trainee_25/", "kind": "TRAINEE", "label": "Software Technology Trainee \u2014 video portal"}, {"hint": "Autumn 2024", "href": "https://rbrooksdk.github.io/MSE1/", "kind": "MSE1", "label": "Mathematics for Software Engineering"}, {"hint": "page", "href": "/", "kind": "page", "label": "Home"}, {"hint": "page", "href": "/courses/", "kind": "page", "label": "All courses by year"}, {"hint": "page", "href": "/supervision/", "kind": "page", "label": "Supervision and project ideas"}, {"hint": "page", "href": "/resources/", "kind": "page", "label": "Books and resources"}, {"hint": "page", "href": "/blog/", "kind": "page", "label": "Blog"}, {"hint": "book", "href": "https://github.com/RBrooksDK/MSE_book_v2", "kind": "book", "label": "Mathematics for Software Engineering"}, {"hint": "book", "href": "https://github.com/RBrooksDK/MSE_book_v2_da", "kind": "book", "label": "Matematik for softwareingeni\u00f8rer"}, {"hint": "book", "href": "https://github.com/RBrooksDK/STA_book_v1", "kind": "book", "label": "Statistics and Data Analysis for Engineers"}, {"hint": "Self-paced course", "href": "https://rbrooksdk.github.io/math_kickstarter/", "kind": "tool", "label": "Math Kickstarter"}, {"hint": "Exam tool", "href": "https://rbrooksdk.github.io/PythonExam/lab/index.html", "kind": "tool", "label": "PythonExam"}, {"hint": "external", "href": "https://github.com/RBrooksDK/", "kind": "link", "label": "GitHub \u2014 RBrooksDK"}, {"hint": "external", "href": "https://www.linkedin.com/in/rbrooks-dk/", "kind": "link", "label": "LinkedIn"}, {"hint": "email", "href": "mailto:rib@via.dk", "kind": "mail", "label": "rib@via.dk"}]</script>
+
     </div>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
@@ -577,14 +748,18 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["announce.dismiss", "content.code.annotate", "content.code.copy", "content.tooltips", "navigation.expand", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["announce.dismiss", "content.code.copy", "content.tooltips", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.suggest", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.c21346df.min.js"></script>
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../javascripts/mathjax.js"></script>
       
         <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"></script>
+      
+        <script src="../javascripts/rb.js"></script>
       
     
   </body>
