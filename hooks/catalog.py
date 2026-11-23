@@ -126,6 +126,8 @@ def _compute(entry: dict, owner: str, today: dt.date) -> dict:
         if isinstance(s, str):
             s = {"title": s}
         s = dict(s)
+        if False in s:  # YAML 1.1 reads the key `no` as boolean False
+            s["no"] = s.pop(False)
         s.setdefault("no", i)
         s["date"] = _as_date(s.get("date"))
         sessions.append(s)
