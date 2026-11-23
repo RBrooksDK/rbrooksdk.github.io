@@ -136,7 +136,9 @@ def _compute(entry: dict, owner: str, today: dt.date) -> dict:
     done = c.get("current")
     status = c.get("status")
     dated = [s["date"] for s in sessions if s["date"]]
-    starts = _as_date(c.get("starts")) or (min(dated) if dated else None)
+    # with a manual `current`, a few dated sessions only label "up next"
+    use_dates = c.get("current") is None
+    starts = _as_date(c.get("starts")) or (min(dated) if dated and use_dates else None)
     ends = _as_date(c.get("ends")) or (max(dated) if dated else None)
 
     if done is None and dated:

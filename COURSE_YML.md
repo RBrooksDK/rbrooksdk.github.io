@@ -33,7 +33,7 @@ sessions are done.
 
 STA1_26, SMP1_26 and MSE1_26 have no session dates, so their progress is set
 by hand in `data/catalog.yml` (`current:`). They switch to "Completed" by
-themselves after `ends: 2026-12-18`.
+themselves after their last session (`ends:`).
 
 ## Older courses, books and resources
 

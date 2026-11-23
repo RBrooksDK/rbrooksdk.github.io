@@ -48,6 +48,7 @@ jobs:
         run: mkdocs gh-deploy --force
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GOOGLE_ANALYTICS_KEY: ${{ secrets.GOOGLE_ANALYTICS_KEY }}
           DISABLE_MKDOCS_2_WARNING: "true"
 
       # GitHub switches scheduled workflows off after 60 days without a commit.

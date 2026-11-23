@@ -31,7 +31,7 @@ courses:
     glyph: "x̄"
     description: From descriptive statistics to regression, in Python, with six group assignments and a project.
     current: 10
-    ends: 2026-12-18
+    ends: 2026-11-24
     sessions:
       - {no: 1, title: Data and Descriptive Statistics}
       - {no: 2, title: Probability for Data Analysis}
@@ -43,8 +43,7 @@ courses:
       - {no: 8, title: "Hypothesis Testing II: Comparing Two Groups"}
       - {no: 9, title: Analysis of Variance}
       - {no: 10, title: Simple Linear Regression}
-      - {no: 11, title: Categorical Data and Chi-Square Tests}
-      - {no: 12, title: Integrated Analysis and Exam Preparation}
+      - {no: 11, title: Categorical Data and Chi-Square Tests, date: 2026-11-24}
 
   - repo: SMP1_26
     code: SMP1
@@ -56,7 +55,7 @@ courses:
     glyph: "P(t)"
     description: Probability, Monte Carlo, Markov chains, Poisson processes and time series.
     current: 10
-    ends: 2026-12-18
+    ends: 2026-11-27
     sessions:
       - {no: 1, title: Probability Foundations}
       - {no: 2, title: Discrete Random Variables}
@@ -68,7 +67,7 @@ courses:
       - {no: 8, title: Markov Chains}
       - {no: 9, title: "Markov Chains: Long-Run Behaviour"}
       - {no: 10, title: Time Series Fundamentals}
-      - {no: 11, title: Autoregressive Models, Forecasting and Recap}
+      - {no: 11, title: "Autoregressive Models, Forecasting and Recap", date: 2026-11-27}
 
   - repo: MSE1_26
     code: MSE1
@@ -80,7 +79,7 @@ courses:
     glyph: "∂"
     description: Functions, sets, combinatorics, probability, linear algebra and gradients.
     current: 11
-    ends: 2026-12-18
+    ends: 2026-11-24
     sessions:
       - {no: 1, title: Functions}
       - {no: 2, title: Numeral Systems}
@@ -93,7 +92,7 @@ courses:
       - {no: 9, title: Matrix Algebra and Determinants}
       - {no: 10, title: Differentiation of Simple Functions}
       - {no: 11, title: Gradients and Partial Derivatives}
-      - {no: 12, title: Conclusion and Q&A}
+      - {no: 12, title: Conclusion and Q&A, date: 2026-11-24}
 
   # --- Spring 2026 -----------------------------------------------------------
   - repo: ALI1_26
